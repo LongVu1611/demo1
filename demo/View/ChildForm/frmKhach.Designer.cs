@@ -128,6 +128,7 @@
             this.data_kh.RowTemplate.Height = 24;
             this.data_kh.Size = new System.Drawing.Size(912, 232);
             this.data_kh.TabIndex = 8;
+            this.data_kh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_kh_CellContentClick);
             // 
             // btn_load
             // 

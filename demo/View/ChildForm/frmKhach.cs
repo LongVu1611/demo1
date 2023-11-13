@@ -42,17 +42,7 @@ namespace demo.View.ChildForm
 
         private void btn_load_Click(object sender, EventArgs e)
         {
-            dskhach.Clear();
-            dskhach = khachController.load();
-            data_kh.Rows.Clear();
-
-            //hien thi len datagridview
-            foreach (Khach khach in dskhach)
-            {
-                string[] row = { khach.getIdkh(), khach.getNamekh(), khach.getAddress(), khach.getPhone() };
-                data_kh.Rows.Add(row);
-
-            }
+            
         }
 
         private void btn_them_Click(object sender, EventArgs e)
@@ -130,6 +120,21 @@ namespace demo.View.ChildForm
         }
 
         private void frmKhach_Load(object sender, EventArgs e)
+        {
+            dskhach.Clear();
+            dskhach = khachController.load();
+            data_kh.Rows.Clear();
+
+            //hien thi len datagridview
+            foreach (Khach khach in dskhach)
+            {
+                string[] row = { khach.getIdkh(), khach.getNamekh(), khach.getAddress(), khach.getPhone() };
+                data_kh.Rows.Add(row);
+
+            }
+        }
+
+        private void data_kh_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

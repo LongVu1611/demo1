@@ -43,7 +43,7 @@ namespace demo.View.ChildForm
                 //int giaThue = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString().Trim());
                 //int sn = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString().Trim());
                 //dataGridView1.Rows[e.RowIndex].Cells[5].Value = sn * giaThue ;
-                decimal giaThue = Convert.ToDecimal(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString().Trim());
+                int giaThue = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString().Trim());
                 int sn = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString().Trim());
 
                 // Gán giá trị mới vào cột Cells[5]
@@ -66,6 +66,7 @@ namespace demo.View.ChildForm
             ds_sanpham = sanphamController.load();
             phieuthueController = new PhieuthueController();
 
+            
             foreach (Nhanvien n in ds_nhanvien)
             {
                 idnv.Items.Add(n.getIdnv());
@@ -126,45 +127,13 @@ namespace demo.View.ChildForm
             for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
             {
                 Chitiet ct = new Chitiet();
-                
-                ct.setIdp(dataGridView1.Rows[i].Cells[0].Value.ToString());
-                ct.setIdsp(dataGridView1.Rows[i].Cells[1].Value.ToString());
 
-                // Lấy giá trị từ cột Cells[4] (int) và chuyển đổi thành kiểu int
-                int songay;
-                if (int.TryParse(dataGridView1.Rows[i].Cells[4].Value.ToString(), out songay))
-                {
-                    ct.setSongay(songay);
-                }
-                else
-                {
-                    // Xử lý lỗi khi giá trị không hợp lệ, ví dụ: đặt giá trị mặc định hoặc hiển thị thông báo lỗi
-                    ct.setSongay(0); // Đặt giá trị mặc định là 0 hoặc thực hiện xử lý tương ứng
-                }
+                ct.setIdp(id.Text.ToString());
+                ct.setIdsp(dataGridView1.Rows[i].Cells[0].Value.ToString());
 
-                // Lấy giá trị từ cột Cells[5] (decimal) và chuyển đổi thành kiểu decimal
-                decimal hoadon;
-                if (decimal.TryParse(dataGridView1.Rows[i].Cells[5].Value.ToString(), out hoadon))
-                {
-                    if (hoadon >= int.MinValue && hoadon <= int.MaxValue)
-                    {
-                        int giaTriInt = (int)hoadon;
-                        ct.setHoadon(giaTriInt);
-                    }
-                    else
-                    {
-                        // Xử lý khi giá trị decimal không thể chuyển đổi thành int
-                        ct.setHoadon(0); // Đặt giá trị mặc định hoặc thực hiện xử lý tương ứng
-                    }
-                }
-                else
-                {
-                    // Xử lý lỗi khi giá trị không hợp lệ
-                    ct.setHoadon(0); // Đặt giá trị mặc định hoặc thực hiện xử lý tương ứng
-                }
+                ct.setSongay(Convert.ToInt32(dataGridView1.Rows[i].Cells[4].Value.ToString()));
+                ct.setHoadon(Convert.ToInt32(dataGridView1.Rows[i].Cells[5].Value.ToString()));
 
-
-                // Gọi chitietController để lưu đối tượng Chitiet vào cơ sở dữ liệu
                 chitietController.insert(ct);
             }
 
@@ -173,6 +142,12 @@ namespace demo.View.ChildForm
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void op_phieu_Click(object sender, EventArgs e)
+        {
+            frmBang bang = new frmBang();
+            bang.ShowDialog();
         }
     }
 }

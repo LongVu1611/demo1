@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -60,6 +66,18 @@
     <Compile Include="Model\Phieuthue.cs" />
     <Compile Include="Model\Sanpham.cs" />
     <Compile Include="Utils\DatabaseHelper.cs" />
+    <Compile Include="View\ChildForm\frmBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChildForm\frmBang.Designer.cs">
+      <DependentUpon>frmBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChildForm\frmChitiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChildForm\frmChitiet.Designer.cs">
+      <DependentUpon>frmChitiet.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ChildForm\frmKhach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,7 +118,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\ChildForm\frmBang.resx">
+      <DependentUpon>frmBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChildForm\frmChitiet.resx">
+      <DependentUpon>frmChitiet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ChildForm\frmKhach.resx">
       <DependentUpon>frmKhach.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +155,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\lumine.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

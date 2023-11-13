@@ -31,12 +31,12 @@ namespace demo.Controller
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    int id = Convert.ToInt32(reader["id"].ToString());
-                    String idp = reader["idp"].ToString();
-                    String idsp = reader["idsp"].ToString();
-                    int soluong = Convert.ToInt32(reader["soluong"].ToString());
+                    int id = Convert.ToInt32(reader["chitietphieuthue"].ToString());
+                    String idp = reader["sophieu"].ToString();
+                    String idsp = reader["masp"].ToString();
+                    int songay = Convert.ToInt32(reader["songaychothue"].ToString());
                     int hoadon = Convert.ToInt32(reader["hoadon"].ToString());
-                    Chitiet chitiet = new Chitiet(id, idp, idsp, soluong, hoadon);
+                    Chitiet chitiet = new Chitiet(id, idp, idsp, songay, hoadon);
                     chitietList.Add(chitiet);
                 }
             }
@@ -71,10 +71,10 @@ namespace demo.Controller
             try
             {
                 conn.Open();
-                SqlCommand command = new SqlCommand("INSERT INTO chitietphieuthue( sophieu, masp , soluong, hoadon)  VALUES (@sophieu, @masp , @soluong, @hoadon)", conn);
+                SqlCommand command = new SqlCommand("INSERT INTO chitietphieuthue( sophieu, masp , songaychothue, hoadon)  VALUES (@sophieu, @masp , @songaychothue, @hoadon)", conn);
                 command.Parameters.AddWithValue("@sophieu", chitiet.getIdp());
                 command.Parameters.AddWithValue("@masp", chitiet.getIdsp());
-                command.Parameters.AddWithValue("@soluong", chitiet.getSongay());
+                command.Parameters.AddWithValue("@songaychothue", chitiet.getSongay());
                 command.Parameters.AddWithValue("@hoadon", chitiet.getHoadon());
                 command.ExecuteNonQuery();
                 return true;
@@ -100,10 +100,10 @@ namespace demo.Controller
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("update chitietphieuthue set sophieu = @sophieu, masp  = @masp , soluong = @soluong, hoadon = @hoadon where chitietphieuthue = @chitietphieuthue", conn);
+                    SqlCommand cmd = new SqlCommand("update chitietphieuthue set sophieu = @sophieu, masp  = @masp , songaychothue = @songaychothue, hoadon = @hoadon where chitietphieuthue = @chitietphieuthue", conn);
                     cmd.Parameters.AddWithValue("@sophieu", chitiet.getIdp());
                     cmd.Parameters.AddWithValue("@masp", chitiet.getIdsp());
-                    cmd.Parameters.AddWithValue("@soluong", chitiet.getSongay());
+                    cmd.Parameters.AddWithValue("@songaychothue", chitiet.getSongay());
                     cmd.Parameters.AddWithValue("@hoadon", chitiet.getHoadon());
                     cmd.Parameters.AddWithValue("@chitietsophieu", chitiet.getId());
                     cmd.ExecuteNonQuery();
@@ -198,9 +198,9 @@ namespace demo.Controller
                     int id = Convert.ToInt32(reader["chitietphieuthue"].ToString());
                     String idp = reader["sophieu"].ToString();
                     String idsp = reader["masp"].ToString();
-                    int soluong = Convert.ToInt32(reader["soluong"].ToString());
+                    int songaychothue = Convert.ToInt32(reader["songaychothue"].ToString());
                     int dongia = Convert.ToInt32(reader["hoadon"].ToString());
-                    Chitiet chitiet = new Chitiet(id, idp, idsp, soluong, dongia);
+                    Chitiet chitiet = new Chitiet(id, idp, idsp, songaychothue, dongia);
                     results.Add(chitiet);
                 }
             }

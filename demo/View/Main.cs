@@ -52,7 +52,13 @@ namespace demo.View
         private void tạoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmPhieuthue());
-            label1.Text = SanPhamstrip.Text;
+            label1.Text = taostrip.Text;
+        }
+
+        private void thôngTinChoThuêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmChitiet());
+            label1.Text = Thongtinstrp.Text;
         }
     }
 }

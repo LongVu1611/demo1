@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.id = new System.Windows.Forms.TextBox();
-            this.idkh = new System.Windows.Forms.TextBox();
             this.idnv = new System.Windows.Forms.ComboBox();
             this.datethue = new System.Windows.Forms.DateTimePicker();
             this.datetra = new System.Windows.Forms.DateTimePicker();
@@ -42,6 +41,8 @@
             this.btn_save = new System.Windows.Forms.Button();
             this.tientra = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.idkh = new System.Windows.Forms.TextBox();
+            this.op_phieu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,13 +52,6 @@
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(190, 22);
             this.id.TabIndex = 0;
-            // 
-            // idkh
-            // 
-            this.idkh.Location = new System.Drawing.Point(160, 119);
-            this.idkh.Name = "idkh";
-            this.idkh.Size = new System.Drawing.Size(190, 22);
-            this.idkh.TabIndex = 1;
             // 
             // idnv
             // 
@@ -165,11 +159,30 @@
             this.label6.Text = "Nhập số tiền thanh toán";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
+            // idkh
+            // 
+            this.idkh.Location = new System.Drawing.Point(160, 125);
+            this.idkh.Name = "idkh";
+            this.idkh.Size = new System.Drawing.Size(190, 22);
+            this.idkh.TabIndex = 16;
+            // 
+            // op_phieu
+            // 
+            this.op_phieu.Location = new System.Drawing.Point(918, 150);
+            this.op_phieu.Name = "op_phieu";
+            this.op_phieu.Size = new System.Drawing.Size(120, 55);
+            this.op_phieu.TabIndex = 17;
+            this.op_phieu.Text = "Mở bảng phiếu thuê";
+            this.op_phieu.UseVisualStyleBackColor = true;
+            this.op_phieu.Click += new System.EventHandler(this.op_phieu_Click);
+            // 
             // frmPhieuthue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 443);
+            this.Controls.Add(this.op_phieu);
+            this.Controls.Add(this.idkh);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tientra);
             this.Controls.Add(this.btn_save);
@@ -182,7 +195,6 @@
             this.Controls.Add(this.datetra);
             this.Controls.Add(this.datethue);
             this.Controls.Add(this.idnv);
-            this.Controls.Add(this.idkh);
             this.Controls.Add(this.id);
             this.Name = "frmPhieuthue";
             this.Text = "frmPhieuthue";
@@ -196,7 +208,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox id;
-        private System.Windows.Forms.TextBox idkh;
         private System.Windows.Forms.ComboBox idnv;
         private System.Windows.Forms.DateTimePicker datethue;
         private System.Windows.Forms.DateTimePicker datetra;
@@ -209,5 +220,7 @@
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.TextBox tientra;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox idkh;
+        private System.Windows.Forms.Button op_phieu;
     }
 }

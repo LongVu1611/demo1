@@ -47,11 +47,6 @@ namespace demo.View.ChildForm
 
         private void frmSanpham_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void btn_load_Click(object sender, EventArgs e)
-        {
             dssanpham.Clear();
             dssanpham = sanphamController.load();
             data_sp.Rows.Clear();
@@ -63,6 +58,11 @@ namespace demo.View.ChildForm
                 data_sp.Rows.Add(row);
 
             }
+        }
+
+        private void btn_load_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void btn_them_Click(object sender, EventArgs e)

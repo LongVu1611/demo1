@@ -32,8 +32,8 @@
             this.danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SanPhamstrip = new System.Windows.Forms.ToolStripMenuItem();
             this.khStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.tạoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thôngTinChoThuêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.taostrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.Thongtinstrp = new System.Windows.Forms.ToolStripMenuItem();
             this.panel = new System.Windows.Forms.Panel();
             this.Menu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,8 +46,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.danhMụcToolStripMenuItem,
-            this.tạoToolStripMenuItem,
-            this.thôngTinChoThuêToolStripMenuItem});
+            this.taostrip,
+            this.Thongtinstrp});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1082, 28);
@@ -77,21 +77,24 @@
             this.khStrip.Text = "Khách hàng";
             this.khStrip.Click += new System.EventHandler(this.kháchHàngToolStripMenuItem_Click);
             // 
-            // tạoToolStripMenuItem
+            // taostrip
             // 
-            this.tạoToolStripMenuItem.Name = "tạoToolStripMenuItem";
-            this.tạoToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
-            this.tạoToolStripMenuItem.Text = "Tạo ";
-            this.tạoToolStripMenuItem.Click += new System.EventHandler(this.tạoToolStripMenuItem_Click);
+            this.taostrip.Name = "taostrip";
+            this.taostrip.Size = new System.Drawing.Size(122, 24);
+            this.taostrip.Text = "Tạo phiếu thuê";
+            this.taostrip.Click += new System.EventHandler(this.tạoToolStripMenuItem_Click);
             // 
-            // thôngTinChoThuêToolStripMenuItem
+            // Thongtinstrp
             // 
-            this.thôngTinChoThuêToolStripMenuItem.Name = "thôngTinChoThuêToolStripMenuItem";
-            this.thôngTinChoThuêToolStripMenuItem.Size = new System.Drawing.Size(147, 24);
-            this.thôngTinChoThuêToolStripMenuItem.Text = "Thông tin cho thuê";
+            this.Thongtinstrp.Name = "Thongtinstrp";
+            this.Thongtinstrp.Size = new System.Drawing.Size(147, 24);
+            this.Thongtinstrp.Text = "Thông tin cho thuê";
+            this.Thongtinstrp.Click += new System.EventHandler(this.thôngTinChoThuêToolStripMenuItem_Click);
             // 
             // panel
             // 
+            this.panel.BackgroundImage = global::demo.Properties.Resources.lumine;
+            this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel.Controls.Add(this.Menu);
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.Location = new System.Drawing.Point(0, 28);
@@ -143,10 +146,10 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem danhMụcToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tạoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem taostrip;
         private System.Windows.Forms.ToolStripMenuItem SanPhamstrip;
         private System.Windows.Forms.ToolStripMenuItem khStrip;
-        private System.Windows.Forms.ToolStripMenuItem thôngTinChoThuêToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Thongtinstrp;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label Menu;
         private System.Windows.Forms.Label label1;
