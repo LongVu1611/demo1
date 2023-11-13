@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBang));
             this.data_bang = new System.Windows.Forms.DataGridView();
             this.LoadPDF = new System.Windows.Forms.Button();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.In = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data_bang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,19 +52,45 @@
             // 
             // LoadPDF
             // 
-            this.LoadPDF.Location = new System.Drawing.Point(620, 50);
+            this.LoadPDF.Location = new System.Drawing.Point(724, 27);
             this.LoadPDF.Name = "LoadPDF";
-            this.LoadPDF.Size = new System.Drawing.Size(75, 23);
+            this.LoadPDF.Size = new System.Drawing.Size(122, 60);
             this.LoadPDF.TabIndex = 1;
             this.LoadPDF.Text = "Xuất PDF";
             this.LoadPDF.UseVisualStyleBackColor = true;
             this.LoadPDF.Click += new System.EventHandler(this.LoadPDF_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // In
+            // 
+            this.In.Location = new System.Drawing.Point(515, 27);
+            this.In.Name = "In";
+            this.In.Size = new System.Drawing.Size(122, 60);
+            this.In.TabIndex = 2;
+            this.In.Text = "In";
+            this.In.UseVisualStyleBackColor = true;
+            this.In.Click += new System.EventHandler(this.In_Click_1);
             // 
             // frmBang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 397);
+            this.Controls.Add(this.In);
             this.Controls.Add(this.LoadPDF);
             this.Controls.Add(this.data_bang);
             this.Name = "frmBang";
@@ -75,5 +105,8 @@
 
         private System.Windows.Forms.DataGridView data_bang;
         private System.Windows.Forms.Button LoadPDF;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button In;
     }
 }

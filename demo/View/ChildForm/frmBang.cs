@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using System.Drawing.Printing;
+using System.Data.SqlClient;
 
 namespace demo.View.ChildForm
 {
@@ -147,6 +149,84 @@ namespace demo.View.ChildForm
             {
                 MessageBox.Show("Không có bản ghi nào được Export!!!", "Info");
             }
+        }
+
+        private void In_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private int  tongtientra, pos = 60;
+
+        private void In_Click_1(object sender, EventArgs e)
+        {
+            PrintDocument printDocument = new PrintDocument();
+            printDocument.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+
+            PrintDialog printDialog = new PrintDialog();
+            printDialog.Document = printDocument;
+
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                printDocument.Print();
+            }
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        int idCounter = 1; // Biến đếm ID, bắt đầu từ 1
+        private string manv, makh;
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            System.Drawing.Font font = new System.Drawing.Font("Arial", 13);
+            
+
+
+            // Vẽ nội dung hóa đơn
+            g.DrawString("HÓA ĐƠN", new System.Drawing.Font("Arial", 18, FontStyle.Regular), new SolidBrush(Color.Black), new Point(80));
+            g.DrawString("Ngày: " + DateTime.Now.ToString(), font, new SolidBrush(Color.Black), new Point(25, 40));
+
+
+            // Các mục hóa đơn
+            int rowCount = data_bang.Rows.Count;
+            foreach (DataGridViewRow row in data_bang.Rows)
+            {
+                if (row.Index < rowCount - 1)
+                {
+                    // Chuyển đổi id thành chuỗi
+                    string id = row.Cells["Số phiếu"].Value.ToString();
+
+                    // Lấy giá trị của mã nhân viên và mã khách hàng
+                    string manv = "" + row.Cells["Mã nhân viên"].Value;
+                    string makh = "" + row.Cells["Mã khách hàng"].Value;
+
+                    // Chuyển đổi datethue và datetra thành kiểu DateTime
+                    DateTime datethue = Convert.ToDateTime(row.Cells["Ngày cho thuê"].Value);
+                    DateTime datetra = Convert.ToDateTime(row.Cells["Ngày trả"].Value);
+
+                    // Chuyển đổi tientra thành kiểu int
+                    int tientra = Convert.ToInt32(Convert.ToDecimal(row.Cells["Tiền trả"].Value));
+
+
+                    g.DrawString("" + id, new System.Drawing.Font("Arial", 18), new SolidBrush(Color.Black), new Point(26, pos));
+                    g.DrawString("" + manv, new System.Drawing.Font("Arial", 18), new SolidBrush(Color.Black), new Point(70, pos));
+                    g.DrawString("" + makh, new System.Drawing.Font("Arial", 18), new SolidBrush(Color.Black), new Point(150, pos));
+                    g.DrawString("" + datethue, new System.Drawing.Font("Arial", 18), new SolidBrush(Color.Black), new Point(200, pos));
+                    g.DrawString("" + datetra, new System.Drawing.Font("Arial", 18), new SolidBrush(Color.Black), new Point(300, pos));
+                    g.DrawString("" + tientra, new System.Drawing.Font("Arial", 18), new SolidBrush(Color.Black), new Point(500, pos));
+                    pos += 20;
+                    idCounter++;
+                    tongtientra += tientra;
+                }
+            }
+            // Tổng cộng
+
+            g.DrawString("Tổng cộng:" + tongtientra + "VN", font, new SolidBrush(Color.Black), new Point(50, pos + 50));
+            pos = 100;
         }
     }
     }
