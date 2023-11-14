@@ -78,7 +78,7 @@
             this.label.Font = new System.Drawing.Font("Comic Sans MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.Location = new System.Drawing.Point(169, 34);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(236, 48);
+            this.label.Size = new System.Drawing.Size(227, 45);
             this.label.TabIndex = 4;
             this.label.Text = "ĐĂNG NHẬP";
             // 
@@ -91,6 +91,7 @@
             this.login_btn.TabIndex = 5;
             this.login_btn.Text = "Đăng nhập";
             this.login_btn.UseVisualStyleBackColor = true;
+            this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
             // Login
             // 

@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Controller\ChitietController.cs" />
     <Compile Include="Controller\KhachController.cs" />
+    <Compile Include="Controller\Modify.cs" />
     <Compile Include="Controller\NhanvienController.cs" />
     <Compile Include="Controller\PhieuthueController.cs" />
     <Compile Include="Controller\SanphamController.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Model\Nhanvien.cs" />
     <Compile Include="Model\Phieuthue.cs" />
     <Compile Include="Model\Sanpham.cs" />
+    <Compile Include="Model\Taikhoan.cs" />
     <Compile Include="Utils\DatabaseHelper.cs" />
     <Compile Include="View\ChildForm\frmBang.cs">
       <SubType>Form</SubType>
