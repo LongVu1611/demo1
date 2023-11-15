@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.data_kh = new System.Windows.Forms.DataGridView();
-            this.btn_load = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
@@ -126,25 +125,14 @@
             this.data_kh.ReadOnly = true;
             this.data_kh.RowHeadersWidth = 51;
             this.data_kh.RowTemplate.Height = 24;
-            this.data_kh.Size = new System.Drawing.Size(912, 232);
+            this.data_kh.Size = new System.Drawing.Size(998, 232);
             this.data_kh.TabIndex = 8;
             this.data_kh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_kh_CellContentClick);
-            // 
-            // btn_load
-            // 
-            this.btn_load.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_load.Location = new System.Drawing.Point(930, 396);
-            this.btn_load.Name = "btn_load";
-            this.btn_load.Size = new System.Drawing.Size(80, 35);
-            this.btn_load.TabIndex = 9;
-            this.btn_load.Text = "Load";
-            this.btn_load.UseVisualStyleBackColor = true;
-            this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
             // 
             // btn_them
             // 
             this.btn_them.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.Location = new System.Drawing.Point(930, 66);
+            this.btn_them.Location = new System.Drawing.Point(930, 41);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(80, 35);
             this.btn_them.TabIndex = 10;
@@ -155,7 +143,7 @@
             // btn_sua
             // 
             this.btn_sua.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sua.Location = new System.Drawing.Point(930, 136);
+            this.btn_sua.Location = new System.Drawing.Point(930, 107);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(80, 35);
             this.btn_sua.TabIndex = 11;
@@ -166,7 +154,7 @@
             // btn_xoa
             // 
             this.btn_xoa.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoa.Location = new System.Drawing.Point(930, 206);
+            this.btn_xoa.Location = new System.Drawing.Point(930, 167);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(80, 35);
             this.btn_xoa.TabIndex = 12;
@@ -182,7 +170,6 @@
             this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.btn_them);
-            this.Controls.Add(this.btn_load);
             this.Controls.Add(this.data_kh);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -212,7 +199,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView data_kh;
-        private System.Windows.Forms.Button btn_load;
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Button btn_xoa;

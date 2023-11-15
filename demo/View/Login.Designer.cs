@@ -69,6 +69,7 @@
             this.txt_pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_pass.Location = new System.Drawing.Point(201, 181);
             this.txt_pass.Name = "txt_pass";
+            this.txt_pass.PasswordChar = '*';
             this.txt_pass.Size = new System.Drawing.Size(192, 22);
             this.txt_pass.TabIndex = 3;
             // 

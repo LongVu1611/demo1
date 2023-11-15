@@ -30,7 +30,6 @@
         {
             this.data_sp = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_load = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -70,18 +69,6 @@
             this.label1.Size = new System.Drawing.Size(109, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Mã sản phẩm";
-            // 
-            // btn_load
-            // 
-            this.btn_load.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_load.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_load.Location = new System.Drawing.Point(898, 192);
-            this.btn_load.Name = "btn_load";
-            this.btn_load.Size = new System.Drawing.Size(119, 38);
-            this.btn_load.TabIndex = 3;
-            this.btn_load.Text = "Load";
-            this.btn_load.UseVisualStyleBackColor = true;
-            this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
             // 
             // label2
             // 
@@ -255,7 +242,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btn_load);
             this.Controls.Add(this.txt_masp);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.data_sp);
@@ -272,7 +258,6 @@
 
         private System.Windows.Forms.DataGridView data_sp;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_load;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
