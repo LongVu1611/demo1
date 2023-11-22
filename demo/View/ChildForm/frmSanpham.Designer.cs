@@ -185,6 +185,7 @@
             this.txt_giathue.Name = "txt_giathue";
             this.txt_giathue.Size = new System.Drawing.Size(232, 28);
             this.txt_giathue.TabIndex = 15;
+            this.txt_giathue.TextChanged += new System.EventHandler(this.txt_giathue_TextChanged);
             // 
             // btn_them
             // 

@@ -77,7 +77,7 @@
             // 
             // In
             // 
-            this.In.Location = new System.Drawing.Point(515, 27);
+            this.In.Location = new System.Drawing.Point(572, 27);
             this.In.Name = "In";
             this.In.Size = new System.Drawing.Size(122, 60);
             this.In.TabIndex = 2;
@@ -94,7 +94,7 @@
             this.Controls.Add(this.LoadPDF);
             this.Controls.Add(this.data_bang);
             this.Name = "frmBang";
-            this.Text = "frmBang";
+            this.Text = "Lịch sử phiếu thuê";
             this.Load += new System.EventHandler(this.frmBang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_bang)).EndInit();
             this.ResumeLayout(false);

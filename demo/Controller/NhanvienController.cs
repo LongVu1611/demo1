@@ -45,5 +45,27 @@ namespace demo.Controller
             }
             return nhanvienlist;
         }
+        public bool insert(Nhanvien nhanvien)
+        {
+            Nhanvien newNhanvien = new Nhanvien();
+            nhanvienlist.Add(newNhanvien);
+            using (SqlConnection conn = DatabaseHelper.getConnection())
+            {
+                conn.Open();
+                string query = "INSERT INTO nhanvien (manhanvien,tennhanvien,ngaysinh,email, sodienthoainv, diachi, sodonhang ) VALUES (@manhanvien,@tennhanvien,@ngaysinh,@email, @sodienthoainv, @diachi, @sodonhang)";
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@manhanvien", nhanvien.getIdnv());
+                    command.Parameters.AddWithValue("@tennhanvien", nhanvien.getTennv());
+                    command.Parameters.AddWithValue("@ngaysinh", nhanvien.getNgaysinh());
+                    command.Parameters.AddWithValue("@email", nhanvien.getEmail());
+                    command.Parameters.AddWithValue("@sodienthoainv", nhanvien.getSdt());
+                    command.Parameters.AddWithValue("@diachi", nhanvien.getDiachi());
+                    command.Parameters.AddWithValue("@sodonhang", nhanvien.getSodon());
+                    int rowsAffected = command.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+        }
     }
 }

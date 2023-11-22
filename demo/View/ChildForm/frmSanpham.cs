@@ -138,5 +138,10 @@ namespace demo.View.ChildForm
 
             btn_load_Click(sender, e);
         }
+
+        private void txt_giathue_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -60,5 +60,11 @@ namespace demo.View
             OpenChildForm(new frmChitiet());
             label1.Text = Thongtinstrp.Text;
         }
+
+        private void nhânViênCửaHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmNhanvien());
+            label1.Text = Nhanvientrip.Text;
+        }
     }
 }

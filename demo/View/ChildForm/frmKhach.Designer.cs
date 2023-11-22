@@ -118,6 +118,7 @@
             // data_kh
             // 
             this.data_kh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_kh.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.data_kh.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.data_kh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_kh.Location = new System.Drawing.Point(12, 206);

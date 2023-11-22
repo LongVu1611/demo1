@@ -20,7 +20,7 @@ namespace demo
             DatabaseHelper.serverName = "ZEN-SPRIGGAN";
             DatabaseHelper.dbName = "demo";
             DatabaseHelper.userDb = "gosu";
-            DatabaseHelper.password = "29041976";
+            DatabaseHelper.password = "16112002";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());

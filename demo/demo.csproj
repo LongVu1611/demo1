@@ -89,6 +89,12 @@
     <Compile Include="View\ChildForm\frmKhach.Designer.cs">
       <DependentUpon>frmKhach.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ChildForm\frmNhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChildForm\frmNhanvien.Designer.cs">
+      <DependentUpon>frmNhanvien.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ChildForm\frmPhieuthue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChildForm\frmKhach.resx">
       <DependentUpon>frmKhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChildForm\frmNhanvien.resx">
+      <DependentUpon>frmNhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChildForm\frmPhieuthue.resx">
       <DependentUpon>frmPhieuthue.cs</DependentUpon>

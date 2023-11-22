@@ -37,6 +37,7 @@
             this.panel = new System.Windows.Forms.Panel();
             this.Menu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Nhanvientrip = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +48,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.danhMụcToolStripMenuItem,
             this.taostrip,
-            this.Thongtinstrp});
+            this.Thongtinstrp,
+            this.Nhanvientrip});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1082, 28);
@@ -122,6 +124,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Menu";
             // 
+            // Nhanvientrip
+            // 
+            this.Nhanvientrip.Name = "Nhanvientrip";
+            this.Nhanvientrip.Size = new System.Drawing.Size(154, 24);
+            this.Nhanvientrip.Text = "Nhân viên cửa hàng";
+            this.Nhanvientrip.Click += new System.EventHandler(this.nhânViênCửaHàngToolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -153,5 +162,6 @@
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label Menu;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem Nhanvientrip;
     }
 }

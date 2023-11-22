@@ -149,5 +149,10 @@ namespace demo.View.ChildForm
             frmBang bang = new frmBang();
             bang.ShowDialog();
         }
+
+        private void datetra_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

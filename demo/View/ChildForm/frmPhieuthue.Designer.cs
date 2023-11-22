@@ -74,6 +74,7 @@
             this.datetra.Name = "datetra";
             this.datetra.Size = new System.Drawing.Size(200, 22);
             this.datetra.TabIndex = 5;
+            this.datetra.ValueChanged += new System.EventHandler(this.datetra_ValueChanged);
             // 
             // dataGridView1
             // 
